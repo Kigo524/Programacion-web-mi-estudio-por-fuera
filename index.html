@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head> <!--es para agregar caracteristicas que no va a ver el usuario -->
+    <title>Mi primera web</title> <!--Aqui se pone lo que dice en la pestaña hasta arriba (donde se cambia de pagina)-->
+</head> <!--Lo que aparece en head tambien es lo que sale en las busquedas en internet-->
+<body> <!--Dentro de body se genera tu el contenido de la pagina-->
+    <h1>Mi primer heading</h1>
+    <h2>Mi segundo heading</h2>
+    <h3>Mi tercer heading</h3><!--Estas etiquetas las usan los motores de busquedas-->
+    <h4>Mi cuarto heading</h4>
+    <h5>Mi quinto heading</h5>
+    <h6>Chonchito feliz</h6>
+
+    <p>Chanchito feliz esta muy feliz</p>
+    <p>Chanchito triste esta muy triste</p>
+    <hr> <!--agrega una linea horizontal-->
+    <h2>Chanchito felipe</h2>
+    <p>Texto un mucho es <span>mucho mas largo</span>  
+        y es para mostrar <br> <!--br es para saltar la linea en el texto (como un enter en word)-->
+        la etiqueta de span!</p>
+        <!--SPAN se usa para identificar otras etiquetas, tambien para resaltar textos con css-->
+    <a href="https://www.google.com.mx">Ir a google</a> <!--Esto es para crear hipervinculos-->
+    <br>
+    <!--Solo que ahref carga la nueva pagina sobre la pagina actual y no en una nueva pestaña-->
+    <a target="_blank" href="https://www.google.com.mx">Ir a google en otra pestaña</a>
+    <br><br><br>
+
+    <!--para imagenes-->
+    <!--Para imagenes en mis archivos tengo que copiar la imagen a la carpeta en donde tengo index
+    y despues de eso se copia la ubicacion y se coloca aqui debajo con el nombre dado-->
+    <!--Ya que la imagen esta en la carpeta, solo basta con colocar el nombre y solito va a parecer el nombre de la foto-->
+    <!--Si son muchas imagenes es mejor guardarlas dentro de una carpeta en la misma carpeta de index
+    de preferencia con noombre img y solo hay que referenciar esa ruta-->
+    
+    <!--Para redimencionar una imagen usamos: 
+    width="" para el ancho y usamos height="" para el alto
+    si usamos solo uno, se mantiene la relacion de tamaño de la imagen-->
+    
+    <img src="img/Espejo con amigos.jpg" height="450"/>
+
+    <!--Ahora vamos a hacer un formulario-->
+    <!--input se utiliza para abrir un cuadro para que escriba el usuario-->
+    <!--se usa label para indicar que dato se esta solicitando-->
+    <!--El for y id es para vincular lo que se solicita con lo escrito-->
+    <!--dentro de input de usa name, ya que al mandarlo a un servidor, el name es la llave
+    de lo que se esta mandando, o el identificador y lo que se escriba en input será el valor
+    de ese identificador-->
+    <!--placeholder es para el texto que queremos que salga dentor del cuadro de input
+    como en letras grises-->
+    <!--type se usa para indicar que tipo de dato se esta introduciendo, por ejemplo:
+    tipo submit: se crea como un botón
+    tipo text: es para escribir cualquier cosa
+    tipo email: va a esperar a que nosotros introduzcamos un valor tipo email
+    tipo password: va a ocultar el valor que se introduce
+    tipo radio: se vuelve un circulo como de relleno de encuesta o de si o no.
+    tipo checkbox: lo convierte en una casilla cuadrada
+    tipo file: lo convierte en un selector de archivos como para subir una foto a drive-->
+    <!--textarea es para una caja de texto como para comentarios pero
+    podemos definir tamaño del cuadro justo despues de textarea con:
+    rows (filas) y cols (columnas)-->
+    <!--input lo vamos a agregar al final para que guarde todo lo introducido arriba
+    y lo mande al servidor-->
+    <!--en method podemos usar GET o POST (de preferencia post pero no importa)-->
+    <form action="/formulario" method="">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+        <br>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido" />
+        <br>
+        <label for="comentario">Comentario</label>
+        <br>
+        <textarea rows="10" cols="50" id="comentario" name="comentario" placeholder="Ingrese comentario c:"></textarea>
+        <br>
+        <input type="submit" />
+        <button type="button">Boton sin accion</button>
+        <button type="reset">Reset</button>
+        <button type="submit">Enviar</button>
+    
+    </form>
+    <!--Si queremos que aparezca un valor por defecto usamos:
+    value="" y es lo que va a aparecer escrito en el campo de texto
+    en el que lo pongamos-->
+
+    <!--BOTONES tienen que ir dentro de form-->
+    <!--incluso se puede poner una imagen como boton como el primero de aqui-->
+    <button type="button"><img src="img/Espejo con amigos.jpg" height="75"/>Boton sin accion</button> <!--esto tiene sentido con JAVASCRIPT-->
+    <button type="reset">Reset</button> <!--este boton limpia las casillas-->
+    <button type="submit">Enviar</button> <!--este boton envia el formulario-->
+
+    <hr>
+
+    <!--LISTAS-->
+    <!--ul es una lista no numerada y
+    li es list item osea elemnto de lista-->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+
+    <!--ol es order list osar lista ordenada-->
+    <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ol>
+
+    <!--para cambiar el valor con el que empiza la lista ordenada se hace esto:-->
+    <ol>
+        <li value="50">Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ol>
+
+    <!--ahora para anidar listas-->
+    <ol>
+        <li value="50">Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>
+            <ol>
+                <li style="list-style-type:lower-alpha">sub elemento 1</li>
+                <li style="list-style-type: lower-roman;">sub elemento 2</li>
+                <li style="list-style-type: upper-roman;">sub elemento 3</li>
+            </ol>
+        </li>
+    </ol>
+
+    <br>
+
+    <!--TABLAS--><!--"tr" son las filas "th" es para las cabeceras "td" es para columnas-->
+    <table style="width: 500px;"   style="border: 1px solid black;">
+        <thead> <!--Es para separar los titulos del cuerpo-->
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody> <!--es para separar el cuerpo de los titulos-->
+            <tr><!--td es para definir elementos estandares dentro de las celdas de la tabla-->
+                <td>Hola beats</td>
+                <td>Gratis</td>
+            </tr>
+            <tr>
+                <td>Chanchito feliz</td>
+                <td>19.90$</td>
+            </tr>
+            <tr>
+                <td>Chanchito feliz muy feliz</td>
+                <td>29.90$</td>
+            </tr>
+        </tbody>
+        <tfoot> <!--es un pie o como para mostrar resultados-->
+            <td></td>
+            <td>Total: 49.80$</td>
+        </tfoot>
+    </table>
+
+
+
+</body>
+</html>
