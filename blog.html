@@ -5,13 +5,13 @@
 </head>
 <body>
     <header><!--Esta es para agrupar links, imagenes o logos. Y se pueden crear varias solo por separado-->
-        <h1>Blog de Kigo</h1>
+        <h1 id="titulo">Blog de Kigo</h1><!--id es un atributo para poder interactuar con esos elementos para asignarle un estilo-->
     </header>
     <div><!--Div contiene el contenido igual que section, pero con div se puede agregar div dentro de div, con article no se puede-->
         <p>Soy un parrafo dentro de un div</p>
     </div>
     <section><!--Es para definir secciones dentro de nuestra pagina para trabajar por partes-->
-        <article><!--es para definir contenido independiente, en este caso los post del blog
+        <article class="post"><!--article es para definir contenido independiente, en este caso los post del blog
             pero tambien se puede para una pagina de noticias o para enmarcar una publicacion como si fuera facebook,
             asi como un tweet en twiter o una imagen en instagram con el titulo de la imagen y la descripcion-->
             <h2>Titulo de mi post</h2>
@@ -19,13 +19,13 @@
             <img src="img/Espejo con amigos.jpg" width="200"/>
             <p>Texto del articulo que hay aca y es texto de prueba. Holaaaa</p>
         </article>
-        <article>
+        <article class="post"> <!--class es para agrupar los estilos-->
             <h2>Titulo de mi post 2</h2>
             <p>Descripcion de mi post 2</p>
             <img src="img/jake mago.jpg" width="200"/>
             <p>Esta es mi foto de perfil en github</p>
         </article>
-        <article>
+        <article class="post">
             <h2>Titulo de mi post 3</h2>
             <p>Descripcion de mi post 3</p>
             <img src="https://imgs.search.brave.com/nmopmqRVtNCUGKFpR-9Nc3l37OWSHQT-HAimhA3iS_k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dWFtLm14L3VuaWRh/ZGVzL2N1YV8wMS5q/cGc" width="200"/>
