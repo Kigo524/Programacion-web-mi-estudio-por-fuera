@@ -60,8 +60,9 @@
     rows (filas) y cols (columnas)-->
     <!--input lo vamos a agregar al final para que guarde todo lo introducido arriba
     y lo mande al servidor-->
+    <!--label es para dar click en el texto y se reasalta el input asociado-->
     <!--en method podemos usar GET o POST (de preferencia post pero no importa)-->
-    <form action="/formulario" method="">
+    <form action="/formulario" method="post"><!--action es para saber que hacer con el formulario una vez completado-->
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
         <br>
